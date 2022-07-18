@@ -5,6 +5,7 @@ import ItemList from "./Components/Grid/ItemList";
 import Productos from "./db.json"
 import './App.css';
 import ItemDetailContainer from "./Components/Details/ItemDetailContainer";
+import Carrito from "./Components/Carrito/Carrito"
 
 function App() {
 
@@ -16,6 +17,7 @@ function App() {
       <Routes>
         <Route path="/catalogo" element={<ItemList elements={ropa} />}/>
         <Route path='/catalogo/:id' element={<ItemDetailContainer />} />
+        <Route path='/carrito' element={<Carrito />} />
       </Routes>
     </div>
   )

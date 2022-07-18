@@ -5,8 +5,12 @@ import { useState } from "react";
 const ItemDetail = ({ idPrenda }) => {
 
     const [prenda, setPrenda] = useState({})
-    const productos = db.Ropa
     const idProducto = parseInt(idPrenda)
+    const [number, setNumber] = useState(0)
+    const [mensaje, setMensaje] = useState("usted puede agregar ó restar remeras")
+    const [stockHay, setStockHay] = useState(true)
+    const productos = db.Ropa
+    const carrito = db.Carrito.productos
 
     useEffect(() => {
         productos.map((producto) => {
@@ -17,13 +21,6 @@ const ItemDetail = ({ idPrenda }) => {
         })
         console.log("soy lap renda", prenda)
     }, []);
-
-
-    const [number, setNumber] = useState(0)
-    const [mensaje, setMensaje] = useState("usted puede agregar ó restar remeras")
-    const [stockHay, setStockHay] = useState(true)
-
-
 
     const handleSuma = () => {
         if (number + 1 <= prenda.stock) {
@@ -49,6 +46,11 @@ const ItemDetail = ({ idPrenda }) => {
         }
     }
 
+    const addCarrito = ()=> {
+        carrito.push([idProducto,number])
+        console.log("Este es el carrito ------>",carrito)
+    }
+
     return (
         <div>
             <h2> {prenda.nombre}</h2>
@@ -66,6 +68,7 @@ const ItemDetail = ({ idPrenda }) => {
                 src={prenda.imagen}
             />
             <br />
+            <button type="button" onClick={addCarrito} > agregar al carrito </button>
         </div>
     )
 }

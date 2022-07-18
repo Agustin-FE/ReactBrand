@@ -96,5 +96,9 @@
             "descripcion": "es una campera militar",
             "imagen": "https://deliverind.com.ar/wp-content/uploads/2021/09/remera-oversize-x3-scaled.jpg"
         }
-    ]
+    ],
+    "Carrito":{
+        "productos": [],
+        "total": 0
+    }
 }
