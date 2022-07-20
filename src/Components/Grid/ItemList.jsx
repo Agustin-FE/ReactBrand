@@ -25,9 +25,9 @@ const ItemList = (data) => {
         <Row className="justify-content-md-center">
             {ropa.map((info, i) => (
                 <Col md="4" mb="2" key={i}>
-                    <Link to={`/catalogo/${info.id}`}>
+{/*                     <Link to={`/catalogo/${info.id}`}> */}
                         <Item prenda={info} />
-                    </Link>
+{/*                     </Link> */}
                 </Col>
             ))}
         </Row>

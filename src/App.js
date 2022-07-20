@@ -6,6 +6,7 @@ import Productos from "./db.json"
 import './App.css';
 import ItemDetailContainer from "./Components/Details/ItemDetailContainer";
 import Carrito from "./Components/Carrito/Carrito"
+import Home from "./Components/Home/Home";
 
 function App() {
 
@@ -14,11 +15,14 @@ function App() {
   return (
     <div>
       <Navbar />
-      <Routes>
-        <Route path="/catalogo" element={<ItemList elements={ropa} />}/>
-        <Route path='/catalogo/:id' element={<ItemDetailContainer />} />
-        <Route path='/carrito' element={<Carrito />} />
-      </Routes>
+      <div>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/catalogo" element={<ItemList elements={ropa} />} />
+          <Route path='/catalogo/:id' element={<ItemDetailContainer />} />
+          <Route path='/carrito' element={<Carrito />} />
+        </Routes>
+      </div>
     </div>
   )
 }
