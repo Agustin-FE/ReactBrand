@@ -5,6 +5,7 @@
             "nombre": "remera colorida",
             "precio": 1250,
             "stock": 5,
+            "amount": 0,
             "descripcion": "es una remera colorida",
             "imagen": "https://deliverind.com.ar/wp-content/uploads/2021/09/remera-oversize-x3-scaled.jpg"
         },
@@ -13,6 +14,7 @@
             "nombre": "remera negra",
             "precio": 1250,
             "stock": 5,
+            "amount": 0,
             "descripcion": "es una remera negra",
             "imagen": "https://deliverind.com.ar/wp-content/uploads/2021/09/remera-oversize-x3-scaled.jpg"
         },
@@ -21,6 +23,7 @@
             "nombre": "remera blanca",
             "precio": 1250,
             "stock": 5,
+            "amount": 0,
             "descripcion": "es una remera blanca",
             "imagen": "https://deliverind.com.ar/wp-content/uploads/2021/09/remera-oversize-x3-scaled.jpg"
         },
@@ -29,6 +32,7 @@
             "nombre": "remera roja",
             "precio": 1250,
             "stock": 5,
+            "amount": 0,
             "descripcion": "es una remera roja",
             "imagen": "https://deliverind.com.ar/wp-content/uploads/2021/09/remera-oversize-x3-scaled.jpg"
         },
@@ -37,6 +41,7 @@
             "nombre": "remera azul",
             "precio": 1250,
             "stock": 5,
+            "amount": 0,
             "descripcion": "es una remera azul",
             "imagen": "https://deliverind.com.ar/wp-content/uploads/2021/09/remera-oversize-x3-scaled.jpg"
         },
@@ -45,6 +50,7 @@
             "nombre": "buzo colorida",
             "precio": 2000,
             "stock": 8,
+            "amount": 0,
             "descripcion": "es una buzo colorida",
             "imagen": "https://deliverind.com.ar/wp-content/uploads/2021/09/remera-oversize-x3-scaled.jpg"
         },
@@ -53,6 +59,7 @@
             "nombre": "buzo negro",
             "precio": 2000,
             "stock": 8,
+            "amount": 0,
             "descripcion": "es una buzo negro",
             "imagen": "https://deliverind.com.ar/wp-content/uploads/2021/09/remera-oversize-x3-scaled.jpg"
         },
@@ -61,6 +68,7 @@
             "nombre": "buzo blanco",
             "precio": 2000,
             "stock": 8,
+            "amount": 0,
             "descripcion": "es una buzo blanco",
             "imagen": "https://deliverind.com.ar/wp-content/uploads/2021/09/remera-oversize-x3-scaled.jpg"
         },
@@ -69,6 +77,7 @@
             "nombre": "buzo bordo",
             "precio": 2000,
             "stock": 8,
+            "amount": 0,
             "descripcion": "es un buzo bordo",
             "imagen": "https://deliverind.com.ar/wp-content/uploads/2021/09/remera-oversize-x3-scaled.jpg"
         },
@@ -77,6 +86,7 @@
             "nombre": "campera negro",
             "precio": 2000,
             "stock": 8,
+            "amount": 0,
             "descripcion": "es una campera negra",
             "imagen": "https://deliverind.com.ar/wp-content/uploads/2021/09/remera-oversize-x3-scaled.jpg"
         },
@@ -85,6 +95,7 @@
             "nombre": "campera blanco",
             "precio": 2000,
             "stock": 8,
+            "amount": 0,
             "descripcion": "es una campera blanca",
             "imagen": "https://deliverind.com.ar/wp-content/uploads/2021/09/remera-oversize-x3-scaled.jpg"
         },
@@ -93,12 +104,9 @@
             "nombre": "campera militar",
             "precio": 2000,
             "stock": 8,
+            "amount": 0,
             "descripcion": "es una campera militar",
             "imagen": "https://deliverind.com.ar/wp-content/uploads/2021/09/remera-oversize-x3-scaled.jpg"
         }
-    ],
-    "Carrito":{
-        "productos": [],
-        "total": 0
-    }
+    ]
 }

@@ -4,8 +4,6 @@ import db from "../../db.json"
 
 function ItemCarrito({ prenda }) {
 
-    const productos = db.Ropa
-    const mostrarProductos = productos[prenda[0]]
 
     console.log("esto es prenda", prenda)
 
@@ -13,14 +11,14 @@ function ItemCarrito({ prenda }) {
         <>
             <div style={{ display:"flex" }} >
                 <div style={{ width: "50%" }}>
-                    <p> {mostrarProductos.nombre}</p>
-                    <p> precio: {mostrarProductos.precio}$</p>
-                    <p> cantidad: {prenda[1]}</p>
+                    <p> {prenda.nombre}</p>
+                    <p> precio: {prenda.precio}$</p>
+                    <p> cantidad: {prenda.amount}</p>
                 </div>
                 <div style={{ width: "50%" }}>
                     <img
                         className="remera"
-                        src={mostrarProductos.imagen}
+                        src={prenda.imagen}
                     />
                 </div>
             </div>

@@ -7,23 +7,26 @@ import './App.css';
 import ItemDetailContainer from "./Components/Details/ItemDetailContainer";
 import Carrito from "./Components/Carrito/Carrito"
 import Home from "./Components/Home/Home";
+import CartProvider from "./Components/Carrito/CarritoContext"
 
 function App() {
 
   const ropa = Productos.Ropa
 
   return (
-    <div>
-      <Navbar />
+    <CartProvider>
       <div>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/catalogo" element={<ItemList elements={ropa} />} />
-          <Route path='/catalogo/:id' element={<ItemDetailContainer />} />
-          <Route path='/carrito' element={<Carrito />} />
-        </Routes>
+        <Navbar />
+        <div>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/catalogo" element={<ItemList elements={ropa} />} />
+            <Route path='/catalogo/:id' element={<ItemDetailContainer />} />
+            <Route path='/carrito' element={<Carrito />} />
+          </Routes>
+        </div>
       </div>
-    </div>
+    </CartProvider>
   )
 }
 

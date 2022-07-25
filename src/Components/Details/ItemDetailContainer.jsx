@@ -6,11 +6,11 @@ import ItemDetail from "./ItemDetail";
 
 const ItemDetailContainer = () => {
     const {id} = useParams();
-    console.log("hola entre")
+    //console.log("hola entre")
 
     const getDetail = () => {
         return new Promise((res, rej) => {
-                console.log("ya pasaron 2 segundos")
+                //console.log("ya pasaron 2 segundos")
             }, 2000)
         }
 

@@ -1,34 +1,34 @@
 import React from 'react';
-import { useState } from 'react';
-import { useEffect } from 'react';
-import db from "../../db.json"
-import ItemCarrito from "./ItemCarrito"
+import { useState, useEffect, useContext } from 'react';
+import ItemCarrito from "./ItemCarrito";
+import { CartContext } from './CarritoContext';
+
 
 function Carrito() {
 
-    const carrito = db.Carrito.productos
-    const productos= db.Ropa
-    let [totalCarrito, setTotalCarrito] = useState(0);
+    const [productsLength, setProductsLength] = useState(0);
+    const { cartItems } = useContext(CartContext);
 
     useEffect(() => {
-        carrito.map((info) => {
-            const id = info[0]
-            const producto = productos[id]
-            setTotalCarrito(totalCarrito + (info[1] * (producto.precio)))
-        } )
-    }, []);
+        setProductsLength(
+            cartItems.reduce((previous, current) => previous + current.amount, 0)
+        );
+    }, [cartItems]);
+
+    const total = cartItems.reduce((previous, current) => previous + current.amount * current.precio, 0)
 
     return (
         <>
+            {cartItems && (
+                <div>
+                    <h2>TU CARRITO</h2>
+                    {cartItems.map((info, i) => (
+                        <ItemCarrito key={i} prenda={info} />
+                    ))}
+                </div>
+            )}
             <div>
-                {carrito.map((info, i) => (
-                    <div key={i}>
-                        <ItemCarrito prenda={info} />
-                    </div>
-                ))}
-            </div>
-            <div>
-                <p> precio total: {totalCarrito} </p>
+                <p> precio total: { total } </p>
             </div>
         </>
     );
