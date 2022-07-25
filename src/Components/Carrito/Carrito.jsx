@@ -23,7 +23,7 @@ function Carrito() {
                 <div>
                     <h2>TU CARRITO</h2>
                     {cartItems.map((info, i) => (
-                        <ItemCarrito key={i} prenda={info} />
+                        <ItemCarrito prenda={info} key={i}  />
                     ))}
                 </div>
             )}

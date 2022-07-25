@@ -22,7 +22,39 @@ function CartProvider( {children}) {
         console.log("CART ITEMS PERO",cartItems)
     }, [cartItems]);
 
-    const addItemToCart = (product) => {
+    const addItemToCart = (product, cant) => {
+
+        setCartItems([...cartItems, {...product, amount: cant}])
+
+        /* const inCart = cartItems.find((productInCart) => productInCart.id === product.id)
+
+        if (inCart) {
+            setCartItems(
+                cartItems.map((productInCart) => {
+                    if (productInCart.id === product.id) {
+                        return { ...inCart, amount: inCart.amount + 1 }
+                    }
+                    else return productInCart;
+                })
+            )
+        }
+        else {
+            setCartItems([...cartItems, { ...product, amount: 1 }])
+        } */
+    }
+
+    const deleteItemToCart = (product) => {
+
+        const inCart = cartItems.filter(
+            (productInCart) => productInCart !== product
+        ); 
+
+        setCartItems(
+            inCart
+        )  
+    }
+
+    /* const addItemToCart = (product) => {
         const inCart = cartItems.find((productInCart) => productInCart.id === product.id)
 
         if (inCart) {
@@ -57,7 +89,7 @@ function CartProvider( {children}) {
                 else return productInCart;
             })
         }
-    }
+    } */
 
 
 

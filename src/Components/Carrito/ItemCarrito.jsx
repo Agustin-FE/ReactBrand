@@ -1,11 +1,11 @@
-import React from 'react';
+import React, {useContext} from 'react';
+import { CartContext } from './CarritoContext';
 import { Link } from 'react-router-dom';
 import db from "../../db.json"
 
-function ItemCarrito({ prenda }) {
+function ItemCarrito({prenda}) {
 
-
-    console.log("esto es prenda", prenda)
+    const {deleteItemToCart} = useContext(CartContext)
 
     return (
         <>
@@ -14,6 +14,7 @@ function ItemCarrito({ prenda }) {
                     <p> {prenda.nombre}</p>
                     <p> precio: {prenda.precio}$</p>
                     <p> cantidad: {prenda.amount}</p>
+                    <button onClick={() => {deleteItemToCart(prenda)}}> borrar </button>
                 </div>
                 <div style={{ width: "50%" }}>
                     <img

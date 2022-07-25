@@ -3,12 +3,11 @@ import db from "../../db.json"
 import "./itemDetail.css"
 import { useState } from "react";
 import { useContext } from "react";
-import CartContext from "../Carrito/CarritoContext";
+import { CartContext } from "../Carrito/CarritoContext";
 
 const ItemDetail = ({ idPrenda }) => {
 
     const {addItemToCart} = useContext(CartContext)
-
 
     const [prenda, setPrenda] = useState({})
     const idProducto = parseInt(idPrenda)
@@ -57,7 +56,7 @@ const ItemDetail = ({ idPrenda }) => {
                     <button type="button" onClick={handleResta} disabled={!stockHay}> minus </button>
                     <button type="button" onClick={handleSuma} disabled={!stockHay}> plus  </button>
                 </div>
-                <button type="button" onClick={() => {addItemToCart(prenda)}} > agregar al carrito </button>
+                <button type="button" disabled={number === 0} onClick={() => {addItemToCart(prenda, number)}} > agregar al carrito </button>
             </div>
             <div style={{ width: "50%"}}>
                 <img
