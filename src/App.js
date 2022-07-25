@@ -23,6 +23,7 @@ function App() {
             <Route path="/catalogo" element={<ItemList elements={ropa} />} />
             <Route path='/catalogo/:id' element={<ItemDetailContainer />} />
             <Route path='/carrito' element={<Carrito />} />
+            <Route path='/compraecha' element={<h1> Tu compra fue exitosa</h1>} />
           </Routes>
         </div>
       </div>

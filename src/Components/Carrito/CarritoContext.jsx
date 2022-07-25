@@ -19,7 +19,6 @@ function CartProvider( {children}) {
 
     useEffect(() => {
         localStorage.setItem("cartProducts", JSON.stringify(cartItems))
-        console.log("CART ITEMS PERO",cartItems)
     }, [cartItems]);
 
     const addItemToCart = (product, cant) => {
@@ -38,8 +37,12 @@ function CartProvider( {children}) {
         )  
     }
 
+    const clearCarrito = () => {
+        localStorage.removeItem("cartProducts");
+    }
+
     return(
-        <CartContext.Provider value={{cartItems, addItemToCart, deleteItemToCart}}>
+        <CartContext.Provider value={{cartItems, addItemToCart, deleteItemToCart, clearCarrito}}>
             {children}
         </CartContext.Provider>
     )
